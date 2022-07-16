@@ -14,6 +14,7 @@ const SearchBar = () => {
     const queryParams = {
       q: `${cityRef.current.value},${countryRef.current.value}`,
     };
+    dispatch(weatherActions.SET_WEATHER_INFO({}));
     dispatch(fetchCurrentWeatherInfo(queryParams));
     dispatch(weatherActions.SET_HAS_ERROR(false));
   };

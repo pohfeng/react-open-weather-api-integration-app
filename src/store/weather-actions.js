@@ -15,8 +15,6 @@ export const fetchCurrentWeatherInfo = (queryParams) => {
     const response = await fetch(url);
     const info = await response.json();
 
-    console.log(info);
-
     if (response.ok) {
       // add history log
       const historyObj = {
