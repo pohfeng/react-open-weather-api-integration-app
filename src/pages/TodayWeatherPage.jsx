@@ -21,7 +21,7 @@ const TodayWeatherPage = () => {
         {!isWeatherInfoEmpty && <WeatherInfo />}
         {hasError && <SearchError />}
       </section>
-      <section>
+      <section className="transition ease-in-out duration-300 transform">
         <HistoryList />
       </section>
     </Fragment>
