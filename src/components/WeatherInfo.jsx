@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useTimeoutFn } from 'react-use';
+
 import { DateTime } from 'luxon';
 import { BigNumber } from 'bignumber.js';
-import { Transition } from '@headlessui/react';
 
 // use big number for calculation accuracy
 const kelvinToCelciusConverter = (number) => {
@@ -12,9 +10,6 @@ const kelvinToCelciusConverter = (number) => {
 };
 
 const WeatherInfo = () => {
-  const [isShowing, setIsShowing] = useState(false);
-  const [, , resetIsShowing] = useTimeoutFn(() => setIsShowing(true), 500);
-
   const weatherInfo = useSelector((state) => state.weather.weatherInfo);
   const generalInfo = weatherInfo?.weather ? weatherInfo?.weather[0] : {};
   const mainInfo = weatherInfo.main;
@@ -31,22 +26,7 @@ const WeatherInfo = () => {
   const minTemperature = kelvinToCelciusConverter(mainInfo.temp_min);
   const maxTemperature = kelvinToCelciusConverter(mainInfo.temp_max);
 
-  useEffect(() => {
-    setIsShowing(false);
-    resetIsShowing();
-  }, [weatherInfo]);
-
   return (
-    // <Transition
-    //   appear={true}
-    //   show={isShowing}
-    //   enter="transition ease-linear duration-300 transform"
-    //   enterFrom="-translate-x-full opacity-0"
-    //   enterTo="translate-x-0 opacity-100"
-    //   leave="transition ease-linear duration-300 transform"
-    //   leaveFrom="translate-x-0 opacity-100"
-    //   leaveTo="-translate-x-full opacity-0"
-    // >
     <div className="mx-10">
       <div className="text-left">{location}</div>
       <div className="flex items-center">
