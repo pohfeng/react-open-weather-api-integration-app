@@ -42,17 +42,17 @@ const HistoryListItem = ({ id, index, name, country, logTime }) => {
       leaveTo="-translate-x-full opacity-0"
     >
       <div className="flex items-center my-4">
-        <div className="flex items-center text-left mr-auto sm:mr-0">
+        <div className="flex items-center mr-auto text-left sm:mr-0">
           <p className="w-6">{`${index + 1}.`}</p>
           <p className="col-span-4">{location}</p>
         </div>
-        <p className="hidden sm:block ml-auto mr-4">
+        <p className="hidden ml-auto mr-4 sm:block">
           {DateTime.fromISO(logTime).toLocaleString(DateTime.TIME_WITH_SECONDS)}
         </p>
-        <button onClick={searchHandler} className="rounded-full mx-1">
+        <button onClick={searchHandler} className="mx-1 rounded-full">
           <FiSearch />
         </button>
-        <button onClick={deleteHistoryHandler} className="rounded-full mx-1">
+        <button onClick={deleteHistoryHandler} className="mx-1 rounded-full">
           <FiTrash2 />
         </button>
       </div>

@@ -1,6 +1,6 @@
 const SearchError = () => {
   return (
-    <div className="animate-scale-bounce border border-solid border-red-600 bg-red-100 py-3 rounded">
+    <div className="py-3 bg-red-100 border border-red-600 border-solid rounded animate-scale-bounce">
       Location Not Found
     </div>
   );

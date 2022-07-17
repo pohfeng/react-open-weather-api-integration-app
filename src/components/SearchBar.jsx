@@ -35,26 +35,26 @@ const SearchBar = () => {
 
   return (
     <Fragment>
-      <div className="sm:grid grid-cols-2 md:grid-cols-3 gap-3 font-normal">
-        <div className="grid grid-cols-3 my-4 items-center">
+      <div className="grid-cols-2 gap-3 font-normal sm:grid md:grid-cols-3">
+        <div className="grid items-center grid-cols-3 my-4">
           <label htmlFor="city">City: </label>
           <input
             ref={cityRef}
-            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full outline-none  focus:border-blue-500"
+            className="w-full col-span-2 px-3 py-1 ml-auto border border-gray-400 border-solid rounded outline-none focus:border-blue-500"
             id="city"
             type="text"
           />
         </div>
-        <div className="grid grid-cols-3 my-4 items-center">
+        <div className="grid items-center grid-cols-3 my-4">
           <label htmlFor="country">Country: </label>
           <input
             ref={countryRef}
-            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full outline-none  focus:border-blue-500 "
+            className="w-full col-span-2 px-3 py-1 ml-auto border border-gray-400 border-solid rounded outline-none focus:border-blue-500 "
             id="country"
             type="text"
           />
         </div>
-        <div className="hidden my-4  md:grid grid-cols-2 gap-2">
+        <div className="hidden grid-cols-2 gap-2 my-4 md:grid">
           {actionBtns}
         </div>
       </div>

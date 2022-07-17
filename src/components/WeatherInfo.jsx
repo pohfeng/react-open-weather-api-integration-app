@@ -34,7 +34,7 @@ const WeatherInfo = () => {
         <img src={iconUrl} alt="weather-icon" />
       </div>
 
-      <table className="table-auto text-left border-collapse">
+      <table className="text-left border-collapse table-auto">
         <tbody>
           <tr>
             <th>Description: </th>

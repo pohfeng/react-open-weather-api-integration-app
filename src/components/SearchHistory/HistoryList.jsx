@@ -10,12 +10,12 @@ const HistoryList = () => {
   });
 
   const noHistoryRecord = (
-    <div className="my-10 text-bold text-gray-500">No Record</div>
+    <div className="my-10 text-gray-500 text-bold">No Record</div>
   );
 
   return (
     <Fragment>
-      <h2 className="font-semibold text-left mt-4">Search History</h2>
+      <h2 className="mt-4 font-semibold text-left">Search History</h2>
       <hr />
       {!histories.length && noHistoryRecord}
       {historyList}

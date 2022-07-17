@@ -14,14 +14,14 @@ const TodayWeatherPage = () => {
 
   return (
     <Fragment>
-      <h1 className="text-left text-lg font-semibold ">Today's Weather</h1>
+      <h1 className="text-lg font-semibold text-left ">Today's Weather</h1>
       <hr />
       <section>
         <SearchBar />
         {!isWeatherInfoEmpty && <WeatherInfo />}
         {hasError && <SearchError />}
       </section>
-      <section className="transition ease-in-out duration-300 transform">
+      <section className="transition duration-300 ease-in-out transform">
         <HistoryList />
       </section>
     </Fragment>
