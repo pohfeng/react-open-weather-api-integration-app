@@ -27,6 +27,7 @@ export const fetchCurrentWeatherInfo = (queryParams) => {
       dispatch(weatherActions.SET_WEATHER_INFO(info));
     } else {
       // handle location not found
+      dispatch(weatherActions.SET_WEATHER_INFO({}));
       dispatch(weatherActions.SET_HAS_ERROR(true));
     }
   };
