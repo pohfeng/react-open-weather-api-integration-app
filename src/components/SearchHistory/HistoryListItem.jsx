@@ -42,11 +42,11 @@ const HistoryListItem = ({ id, index, name, country, logTime }) => {
       leaveTo="-translate-x-full opacity-0"
     >
       <div className="flex items-center my-4">
-        <div className="flex items-center text-left ">
+        <div className="flex items-center text-left mr-auto sm:mr-0">
           <p className="w-6">{`${index + 1}.`}</p>
           <p className="col-span-4">{location}</p>
         </div>
-        <p className="ml-auto mr-4">
+        <p className="hidden sm:block ml-auto mr-4">
           {DateTime.fromISO(logTime).toLocaleString(DateTime.TIME_WITH_SECONDS)}
         </p>
         <button onClick={searchHandler} className="rounded-full mx-1">

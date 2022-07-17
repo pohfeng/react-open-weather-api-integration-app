@@ -27,7 +27,7 @@ const WeatherInfo = () => {
   const maxTemperature = kelvinToCelciusConverter(mainInfo.temp_max);
 
   return (
-    <div className="mx-10">
+    <div className="m-auto sm:mx-10">
       <div className="text-left">{location}</div>
       <div className="flex items-center">
         <strong className="text-3xl">{generalInfo.main}</strong>

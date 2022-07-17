@@ -39,7 +39,7 @@ const SearchBar = () => {
           <label htmlFor="city">City: </label>
           <input
             ref={cityRef}
-            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full"
+            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full outline-none  focus:border-blue-500"
             id="city"
             type="text"
           />
@@ -48,7 +48,7 @@ const SearchBar = () => {
           <label htmlFor="country">Country: </label>
           <input
             ref={countryRef}
-            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full"
+            className="border border-solid border-gray-400 rounded col-span-2 ml-auto py-1 px-3 w-full outline-none  focus:border-blue-500 "
             id="country"
             type="text"
           />
