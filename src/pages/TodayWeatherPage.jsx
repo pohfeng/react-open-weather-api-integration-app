@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { isEmpty } from 'lodash';
+import { isEmpty } from 'lodash-es';
 
 import SearchBar from '../components/SearchBar';
 import SearchError from '../components/SearchError';
